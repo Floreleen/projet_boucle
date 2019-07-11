@@ -8,8 +8,8 @@ end
 def login
   puts "Peux-tu confirmer ton mot de passe ?"
   print "> "
-  passeword2 = gets.champ
-  return passeword2
+  pswd = gets.champ
+  return pswd
 end
 
 def welcome_screnn
@@ -17,10 +17,13 @@ def welcome_screnn
 end
 
 def perform
-  if passeword == passeword2
+  passeword = sign_up
+  if passeword == pswd
     puts "c'est bien !"
   else
   puts "et non sorry.. try again !"
   end
+  login
+  welcome_screnn
 end
 perform
