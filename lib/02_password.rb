@@ -12,14 +12,15 @@ def login
   return passeword2
 end
 
-def perform
-  passeword = sign_up
-  passeword2 = login
-  if passeword2 == passeword
-    puts "c'est bien !"
-  else
-    puts "et non sorry.. try again !"
-  end
+def welcome_screnn
+    puts "Bienvenue, voici des informations top de chez top secrètes !"
 end
 
+def perform
+  if passeword == passeword2
+    puts "c'est bien !"
+  else
+  puts "et non sorry.. try again !"
+  end
+end
 perform
