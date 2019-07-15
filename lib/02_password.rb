@@ -5,11 +5,18 @@ def sign_up
   return passeword
 end
 
-def login
+def login (passeword)
   puts "Peux-tu confirmer ton mot de passe ?"
   print "> "
-  pswd = gets.champ
-  return pswd
+  pswd = gets.chomp
+
+  if passeword == pswd
+    puts "c'est bien !"
+  else
+  puts "et non sorry.. try again !"
+  pswd = get.chomp
+  end
+
 end
 
 def welcome_screnn
@@ -18,12 +25,7 @@ end
 
 def perform
   passeword = sign_up
-  if passeword == pswd
-    puts "c'est bien !"
-  else
-  puts "et non sorry.. try again !"
-  end
-  login
+  login (passeword)
   welcome_screnn
 end
 perform
